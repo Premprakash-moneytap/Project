@@ -1,0 +1,10 @@
+package QA.Automation;
+
+public class Trail1 {
+	
+	public static void main(String a[])
+	{
+		System.out.println("asdas");
+	}
+
+}
