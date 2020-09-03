@@ -1,0 +1,19 @@
+package Functions;
+
+import org.openqa.selenium.WebDriver;
+
+public class UI_Login 
+{
+
+	
+	public void delete_login(WebDriver Driver ,String Email)
+	{
+		String Del_URL="https://dev.moneytap.com/engg/nodered/supportal/customer/delete/"+Email+"/dev";
+		Driver.get(Del_URL); 
+		Driver.manage().window().maximize();
+		Driver.manage().timeouts().pageLoadTimeout(10, unit)
+
+		
+		
+	}
+}

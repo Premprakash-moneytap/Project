@@ -1,0 +1,11 @@
+package Functions;
+
+public class UI_Login 
+{
+
+	
+	public void delete_login(String Email)
+	{
+		
+	}
+}

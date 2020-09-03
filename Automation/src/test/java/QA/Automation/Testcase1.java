@@ -4,33 +4,38 @@ package QA.Automation;
 import java.io.IOException;
 
 import org.json.simple.parser.ParseException;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import Data.API_Auth;
 import Data.API_ProfileData;
 import Functions.API_NewFucntions;
+import Functions.UI_Login;
 
 //@SuppressWarnings("unused")
 public class Testcase1 
 {
 	
-//	@before test
+	public WebDriver driver;
+//	@Test
+//	public void setup()
 //	{
-//		call url -to delete customer
-//		query to delete pan card
+//		
+//		
+//		UI_Login.delete_login(driver,API_ProfileData.Email_1);
+////		delete query to remove PAN details..
+//		
 //	}
+	
 	@Test
 	public void test() throws IOException, ParseException
 	{
-
 		String Auth =API_NewFucntions.Auth_HDBFS(API_Auth.HBDFS_Username,API_Auth.HBDFS_Password);
 		System.out.println(Auth);
-		String CustomerID=API_NewFucntions.BuildProfile(Auth, API_ProfileData.HDBFS_ProfileData1);
-
-		System.out.println(CustomerID);
+		String ExternalID=API_NewFucntions.BuildProfile(Auth, API_ProfileData.HDBFS_ProfileData1);
+		System.out.println(ExternalID);
 	}
 
-	
 //	@after test
 //	{
 //			call url -to delete customer

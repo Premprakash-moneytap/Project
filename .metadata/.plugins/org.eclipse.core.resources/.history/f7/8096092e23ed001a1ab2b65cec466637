@@ -1,0 +1,38 @@
+package Functions;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import Page.Login_page;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class UI_Login 
+{
+
+	
+	public static void delete_login(WebDriver Driver ,String Email)
+	{
+		String Del_URL="https://dev.moneytap.com/engg/nodered/supportal/customer/delete/"+Email+"/dev";
+		String title;
+		
+		WebDriverManager.chromedriver().setup();
+		Driver=new ChromeDriver();
+	
+		Driver.get(Del_URL); 
+		Driver.manage().window().maximize();
+		Driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		title=Driver.getTitle();
+		System.out.println(title);
+
+		//not signed in
+		if(title=="Sign In" )
+		{
+			Actions act=new Action(Driver);
+			
+		}
+		
+	}
+}

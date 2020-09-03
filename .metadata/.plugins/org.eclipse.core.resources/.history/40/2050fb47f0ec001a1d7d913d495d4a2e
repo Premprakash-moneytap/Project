@@ -1,0 +1,44 @@
+package Functions;
+
+import java.sql.*;
+import org.postgresql.*;
+import org.testng.annotations.Test;
+
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.Session;
+
+public class SQL_functions
+{
+@Test
+	public void Create_connection() throws ClassNotFoundException, SQLException
+	{
+	String user = "techadminacct";
+    String password = "cashin2oo8$";
+    String host = "13.126.179.1";
+    int port=22;
+    try
+        {
+        JSch jsch = new JSch();
+        Session session = jsch.getSession(user, host, port);
+        int  lport = 5432;
+        String rhost = "devpg001-mumbai.claxidzirf9s.ap-south-1.rds.amazonaws.com";
+        int rport = 22;
+        session.setPassword(password);
+        session.setConfig("StrictHostKeyChecking", "no");
+        System.out.println("Establishing Connection...");
+        session.connect();
+        int assinged_port=session.setPortForwardingL(lport, rhost, rport);
+        System.out.println("localhost:"+assinged_port+" -> "+rhost+":"+rport);
+        
+        }
+    catch(Exception e){System.err.print(e);}
+}
+	/*
+		 Class.forName("org.postgresql.Driver");
+		 Connection  c = DriverManager.getConnection("jdbc:postgresql://devpg001-mumbai.claxidzirf9s.ap-south-1.rds.amazonaws.com:5432/cashindb","techadminacct", "cashin2oo8$");
+//		 Connection  c = DriverManager.getConnection("jdbc:postgresql:13.126.179.1:22/cashindb","techadminacct", "cashin2oo8$");
+	        
+		 System.out.println("Opened database successfully"); */
+	}
+	
+

@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,8 +37,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-QA_Automation_AppTest">
-              <span class="suite-name border-passed">QA.Automation.AppTest</span>
+            <a href="#" class="navigator-link" panel-name="suite-QA_Automation_Testcase1">
+              <span class="suite-name border-failed">QA.Automation.Testcase1</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-QA_Automation_AppTest">
+                  <a href="#" class="navigator-link " panel-name="test-xml-QA_Automation_Testcase1">
                     <span>[unset file name]</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-QA_Automation_AppTest">
+                  <a href="#" class="navigator-link " panel-name="testlist-QA_Automation_Testcase1">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-QA_Automation_AppTest">
+                  <a href="#" class="navigator-link " panel-name="group-QA_Automation_Testcase1">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-QA_Automation_AppTest">
+                  <a href="#" class="navigator-link " panel-name="times-QA_Automation_Testcase1">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-QA_Automation_AppTest">
+                  <a href="#" class="navigator-link " panel-name="reporter-QA_Automation_Testcase1">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-QA_Automation_AppTest">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-QA_Automation_Testcase1">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-QA_Automation_AppTest">
+                  <a href="#" class="navigator-link " panel-name="chronological-QA_Automation_Testcase1">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,7 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">0 methods,   </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-QA_Automation_Testcase1" class="hide-methods failed suite-QA_Automation_Testcase1"> (hide)</a> <!-- hide-methods failed suite-QA_Automation_Testcase1 -->
+                      <a href="#" panel-name="suite-QA_Automation_Testcase1" class="show-methods failed suite-QA_Automation_Testcase1"> (show)</a> <!-- show-methods failed suite-QA_Automation_Testcase1 -->
+                    </span>
+                    <div class="method-list-content failed suite-QA_Automation_Testcase1">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-QA_Automation_Testcase1" title="QA.Automation.Testcase1" hash-for-method="test">test</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-QA_Automation_Testcase1 -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -102,28 +116,65 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-QA_Automation_AppTest" class="panel QA_Automation_AppTest">
-        </div> <!-- panel QA_Automation_AppTest -->
-        <div panel-name="test-xml-QA_Automation_AppTest" class="panel">
+        <div panel-name="suite-QA_Automation_Testcase1" class="panel QA_Automation_Testcase1">
+          <div class="suite-QA_Automation_Testcase1-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">QA.Automation.Testcase1</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test">
+                  </a> <!-- test -->
+                  <span class="method-name">test</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;477&gt;.
+
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:494)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:656)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
+	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:125)
+	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:133)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
+	at Functions.API_NewFucntions.BuildProfile(API_NewFucntions.java:31)
+	at QA.Automation.Testcase1.test(Testcase1.java:36)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 46 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-QA_Automation_Testcase1-class-failed -->
+        </div> <!-- panel QA_Automation_Testcase1 -->
+        <div panel-name="test-xml-QA_Automation_Testcase1" class="panel">
           <div class="main-panel-header rounded-window-top">
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite verbose=&quot;0&quot; name=&quot;QA.Automation.AppTest&quot;&gt;
+&lt;suite verbose=&quot;0&quot; name=&quot;QA.Automation.Testcase1&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Command line test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;QA.Automation.AppTest&quot;/&gt;
+      &lt;class name=&quot;QA.Automation.Testcase1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Command line test --&gt;
-&lt;/suite&gt; &lt;!-- QA.Automation.AppTest --&gt;
+&lt;/suite&gt; &lt;!-- QA.Automation.Testcase1 --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-QA_Automation_AppTest" class="panel">
+        <div panel-name="testlist-QA_Automation_Testcase1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for QA.Automation.AppTest</span>
+            <span class="header-content">Tests for QA.Automation.Testcase1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
@@ -133,57 +184,73 @@
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-QA_Automation_AppTest" class="panel">
+        <div panel-name="group-QA_Automation_Testcase1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for QA.Automation.AppTest</span>
+            <span class="header-content">Groups for QA.Automation.Testcase1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-QA_Automation_AppTest" class="panel">
+        <div panel-name="times-QA_Automation_Testcase1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for QA.Automation.AppTest</span>
+            <span class="header-content">Times for QA.Automation.Testcase1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_QA_Automation_AppTest');
-function tableData_QA_Automation_AppTest() {
+suiteTableInitFunctions.push('tableData_QA_Automation_Testcase1');
+function tableData_QA_Automation_Testcase1() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(0);
-window.suiteTableData['QA_Automation_AppTest']= { tableData: data, tableDiv: 'times-div-QA_Automation_AppTest'}
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'test')
+data.setCell(0, 2, 'QA.Automation.Testcase1')
+data.setCell(0, 3, 4122);
+window.suiteTableData['QA_Automation_Testcase1']= { tableData: data, tableDiv: 'times-div-QA_Automation_Testcase1'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
-              <div id="times-div-QA_Automation_AppTest">
-              </div> <!-- times-div-QA_Automation_AppTest -->
+              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <div id="times-div-QA_Automation_Testcase1">
+              </div> <!-- times-div-QA_Automation_Testcase1 -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-QA_Automation_AppTest" class="panel">
+        <div panel-name="reporter-QA_Automation_Testcase1" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for QA.Automation.AppTest</span>
+            <span class="header-content">Reporter output for QA.Automation.Testcase1</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-QA_Automation_AppTest" class="panel">
+        <div panel-name="ignored-methods-QA_Automation_Testcase1" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-QA_Automation_AppTest" class="panel">
+        <div panel-name="chronological-QA_Automation_Testcase1" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">QA.Automation.Testcase1</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test</span>
+                <span class="method-start">30 ms</span>
+              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

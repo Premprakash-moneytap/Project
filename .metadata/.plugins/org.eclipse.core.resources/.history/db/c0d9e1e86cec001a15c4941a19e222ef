@@ -1,0 +1,40 @@
+package QA.Automation;
+
+
+import java.io.IOException;
+
+import org.json.simple.parser.ParseException;
+import org.testng.annotations.Test;
+
+import Data.API_Auth;
+import Data.API_ProfileData;
+import Functions.API_NewFucntions;
+
+//@SuppressWarnings("unused")
+public class Testcase1 
+{
+	
+//	@before test
+//	{
+//		call url -to delete customer
+//		query to delete pan card
+//	}
+	@Test
+	public void test() throws IOException, ParseException
+	{
+
+		String Auth =API_NewFucntions.Auth_HDBFS(API_Auth.HBDFS_Username,API_Auth.HBDFS_Password);
+		System.out.println(Auth);
+		String CustomerID=API_NewFucntions.BuildProfile(Auth, API_ProfileData.HDBFS_ProfileData1);
+
+		System.out.println(CustomerID);
+	}
+
+	
+//	@after test
+//	{
+//			call url -to delete customer
+//			query to delete pan card
+//		
+//	}
+}

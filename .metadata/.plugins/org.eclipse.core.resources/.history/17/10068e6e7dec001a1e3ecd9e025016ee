@@ -1,0 +1,17 @@
+package Functions;
+
+import java.sql.*;
+
+import org.testng.annotations.Test;
+
+public class SQL_functions
+{
+@Test
+	public void Create_connection() throws ClassNotFoundException, SQLException
+	{
+		 Class.forName("org.postgresql.Driver");
+		 Connection  c = DriverManager.getConnection("jdbc:postgresql://devpg001-mumbai.claxidzirf9s.ap-south-1.rds.amazonaws.com:5432/cashindb","techadminacct", "cashin2oo8$");
+         System.out.println("Opened database successfully");
+	}
+	
+}

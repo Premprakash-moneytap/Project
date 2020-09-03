@@ -35,4 +35,6 @@ public class API_ProfileData
     		+ "\"mode\": \"NETBANKING\","
     		+ "\"bankIfscPrefixes\": ["
     		+ "\"ABHY\"]}}";
+	
+	public static String Email_1="prakash.hacker@gmail.com";
 }
